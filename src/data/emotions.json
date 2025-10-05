@@ -1,0 +1,926 @@
+{
+  "metadata": {
+    "versao": "2.0",
+    "autor": "Danielle Gurgel",
+    "total_emocoes": 126,
+    "primarias": 6,
+    "secundarias": 40,
+    "terciarias": 80
+  },
+  "emocoes": {
+    "FELICIDADE": {
+      "nivel": "primaria",
+      "tamanho_original": 10,
+      "cores": {
+        "centro": {
+          "classe": "cls-14",
+          "hex": "#fdd835"
+        },
+        "meio": {
+          "classe": "cls-24",
+          "hex": "#fde167"
+        },
+        "externa": {
+          "classe": "cls-13",
+          "hex": "#feeda4"
+        }
+      },
+      "comportamento": "Emoção primária fundamental - comportamento em desenvolvimento."
+    },
+    "SURPRESA": {
+      "nivel": "primaria",
+      "tamanho_original": 8,
+      "cores": {
+        "centro": {
+          "classe": "cls-8",
+          "hex": "#b388ff"
+        },
+        "meio": {
+          "classe": "cls-23",
+          "hex": "#c6a5ff"
+        },
+        "externa": {
+          "classe": "cls-6",
+          "hex": "#dcc9ff"
+        }
+      },
+      "comportamento": "Emoção primária fundamental - comportamento em desenvolvimento."
+    },
+    "TRISTEZA": {
+      "nivel": "primaria",
+      "tamanho_original": 8,
+      "cores": {
+        "centro": {
+          "classe": "cls-4",
+          "hex": "#42a5f5"
+        },
+        "meio": {
+          "classe": "cls-20",
+          "hex": "#71bbf7"
+        },
+        "externa": {
+          "classe": "cls-3",
+          "hex": "#a9d6fa"
+        }
+      },
+      "comportamento": "Emoção primária fundamental - comportamento em desenvolvimento."
+    },
+    "NOJO": {
+      "nivel": "primaria",
+      "tamanho_original": 4,
+      "cores": {
+        "centro": {
+          "classe": "cls-10",
+          "hex": "#66bb6a"
+        },
+        "meio": {
+          "classe": "cls-21",
+          "hex": "#8ccc8f"
+        },
+        "externa": {
+          "classe": "cls-12",
+          "hex": "#bae0bb"
+        }
+      },
+      "comportamento": "Emoção primária fundamental - comportamento em desenvolvimento."
+    },
+    "RAIVA": {
+      "nivel": "primaria",
+      "tamanho_original": 5,
+      "cores": {
+        "centro": {
+          "classe": "cls-9",
+          "hex": "#e53935"
+        },
+        "meio": {
+          "classe": "cls-26",
+          "hex": "#eb6a67"
+        },
+        "externa": {
+          "classe": "cls-5",
+          "hex": "#f3a5a4"
+        }
+      },
+      "comportamento": "Emoção primária fundamental - comportamento em desenvolvimento."
+    },
+    "MEDO": {
+      "nivel": "primaria",
+      "tamanho_original": 4,
+      "cores": {
+        "centro": {
+          "classe": "cls-11",
+          "hex": "#ffb74d"
+        },
+        "meio": {
+          "classe": "cls-22",
+          "hex": "#ffc979"
+        },
+        "externa": {
+          "classe": "cls-16",
+          "hex": "#ffdeae"
+        }
+      },
+      "comportamento": "Emoção primária fundamental - comportamento em desenvolvimento."
+    },
+    "DIVERTIDO": {
+      "nivel": "secundaria",
+      "tamanho_original": 9,
+      "emocao_primaria": "FELICIDADE",
+      "comportamento": "Emoção secundária relacionada a FELICIDADE - comportamento em desenvolvimento."
+    },
+    "Excitado": {
+      "nivel": "terciaria",
+      "tamanho_original": 8,
+      "emocao_primaria": "FELICIDADE",
+      "emocao_secundaria": "DIVERTIDO",
+      "comportamento": "entra em qualquer movimento; o coração opera antes da mente, e o clique vira descarga de energia."
+    },
+    "Irreverente": {
+      "nivel": "terciaria",
+      "tamanho_original": 11,
+      "emocao_primaria": "FELICIDADE",
+      "emocao_secundaria": "DIVERTIDO",
+      "comportamento": "acha graça do risco; desafia o mercado só pra sentir que é diferente."
+    },
+    "CONTENTE": {
+      "nivel": "secundaria",
+      "tamanho_original": 8,
+      "emocao_primaria": "FELICIDADE",
+      "comportamento": "Emoção secundária relacionada a FELICIDADE - comportamento em desenvolvimento."
+    },
+    "Livre": {
+      "nivel": "terciaria",
+      "tamanho_original": 5,
+      "emocao_primaria": "FELICIDADE",
+      "emocao_secundaria": "CONTENTE",
+      "comportamento": "ignora o plano; confunde liberdade com ausência de limite."
+    },
+    "Alegre": {
+      "nivel": "terciaria",
+      "tamanho_original": 6,
+      "emocao_primaria": "FELICIDADE",
+      "emocao_secundaria": "CONTENTE",
+      "comportamento": "se diverte com o gráfico; faz piada enquanto perde foco."
+    },
+    "INTERESSADO": {
+      "nivel": "secundaria",
+      "tamanho_original": 11,
+      "emocao_primaria": "FELICIDADE",
+      "comportamento": "Emoção secundária relacionada a FELICIDADE - comportamento em desenvolvimento."
+    },
+    "Curioso": {
+      "nivel": "terciaria",
+      "tamanho_original": 7,
+      "emocao_primaria": "FELICIDADE",
+      "emocao_secundaria": "INTERESSADO",
+      "comportamento": "abre tudo que pisca; pesquisa, mas não executa; quer entender tudo antes de agir."
+    },
+    "Questionador": {
+      "nivel": "terciaria",
+      "tamanho_original": 12,
+      "emocao_primaria": "FELICIDADE",
+      "emocao_secundaria": "INTERESSADO",
+      "comportamento": "muda o método a cada perda; vive em modo “tô testando algo novo”."
+    },
+    "ORGULHOSO": {
+      "nivel": "secundaria",
+      "tamanho_original": 9,
+      "emocao_primaria": "FELICIDADE",
+      "comportamento": "Emoção secundária relacionada a FELICIDADE - comportamento em desenvolvimento."
+    },
+    "Bem-sucedido": {
+      "nivel": "terciaria",
+      "tamanho_original": 12,
+      "emocao_primaria": "FELICIDADE",
+      "emocao_secundaria": "ORGULHOSO",
+      "comportamento": "se sente no topo; acredita que pode ensinar o mercado o que é disciplina."
+    },
+    "Confiante": {
+      "nivel": "terciaria",
+      "tamanho_original": 9,
+      "emocao_primaria": "FELICIDADE",
+      "emocao_secundaria": "ORGULHOSO",
+      "comportamento": "entra firme, mas esquece de proteger; acha que controle é sinônimo de resultado."
+    },
+    "ACEITO": {
+      "nivel": "secundaria",
+      "tamanho_original": 6,
+      "emocao_primaria": "FELICIDADE",
+      "comportamento": "Emoção secundária relacionada a FELICIDADE - comportamento em desenvolvimento."
+    },
+    "Respeitado": {
+      "nivel": "terciaria",
+      "tamanho_original": 10,
+      "emocao_primaria": "FELICIDADE",
+      "emocao_secundaria": "ACEITO",
+      "comportamento": "precisa que os outros vejam que ele acertou; busca aprovação no gain."
+    },
+    "Valorizado": {
+      "nivel": "terciaria",
+      "tamanho_original": 10,
+      "emocao_primaria": "FELICIDADE",
+      "emocao_secundaria": "ACEITO",
+      "comportamento": "sente que agora o mercado o reconhece; a euforia vem disfarçada de mérito."
+    },
+    "PODEROSO": {
+      "nivel": "secundaria",
+      "tamanho_original": 8,
+      "emocao_primaria": "FELICIDADE",
+      "comportamento": "Emoção secundária relacionada a FELICIDADE - comportamento em desenvolvimento."
+    },
+    "Corajoso": {
+      "nivel": "terciaria",
+      "tamanho_original": 8,
+      "emocao_primaria": "FELICIDADE",
+      "emocao_secundaria": "PODEROSO",
+      "comportamento": "aumenta a mão pra provar pra si que superou o medo; confunde coragem com impulsividade."
+    },
+    "Criativo": {
+      "nivel": "terciaria",
+      "tamanho_original": 8,
+      "emocao_primaria": "FELICIDADE",
+      "emocao_secundaria": "PODEROSO",
+      "comportamento": "inventa setups no meio do pregão; chama de insight o que é fuga da rotina."
+    },
+    "TRANQUILO": {
+      "nivel": "secundaria",
+      "tamanho_original": 9,
+      "emocao_primaria": "FELICIDADE",
+      "comportamento": "Emoção secundária relacionada a FELICIDADE - comportamento em desenvolvimento."
+    },
+    "Amoroso": {
+      "nivel": "terciaria",
+      "tamanho_original": 7,
+      "emocao_primaria": "FELICIDADE",
+      "emocao_secundaria": "TRANQUILO",
+      "comportamento": "protege o ativo com apego; não consegue stopar porque “acredita nele”."
+    },
+    "Grato": {
+      "nivel": "terciaria",
+      "tamanho_original": 5,
+      "emocao_primaria": "FELICIDADE",
+      "emocao_secundaria": "TRANQUILO",
+      "comportamento": "agradece o gain, mas reabre a operação logo depois; confunde gratidão com esperança."
+    },
+    "CONFIANDO": {
+      "nivel": "secundaria",
+      "tamanho_original": 9,
+      "emocao_primaria": "FELICIDADE",
+      "comportamento": "Emoção secundária relacionada a FELICIDADE - comportamento em desenvolvimento."
+    },
+    "Íntimo": {
+      "nivel": "terciaria",
+      "tamanho_original": 6,
+      "emocao_primaria": "FELICIDADE",
+      "emocao_secundaria": "CONFIANDO",
+      "comportamento": "sente que entende o mercado como ninguém; esquece que ele não tem rosto."
+    },
+    "Sensível": {
+      "nivel": "terciaria",
+      "tamanho_original": 8,
+      "emocao_primaria": "FELICIDADE",
+      "emocao_secundaria": "CONFIANDO",
+      "comportamento": "capta cada micro-movimento; o emocional reage antes da técnica."
+    },
+    "OTIMISTA": {
+      "nivel": "secundaria",
+      "tamanho_original": 8,
+      "emocao_primaria": "FELICIDADE",
+      "comportamento": "Emoção secundária relacionada a FELICIDADE - comportamento em desenvolvimento."
+    },
+    "Esperançoso": {
+      "nivel": "terciaria",
+      "tamanho_original": 11,
+      "emocao_primaria": "FELICIDADE",
+      "emocao_secundaria": "OTIMISTA",
+      "comportamento": "segura posição perdendo; chama fé o que é negação."
+    },
+    "Inspirado": {
+      "nivel": "terciaria",
+      "tamanho_original": 9,
+      "emocao_primaria": "FELICIDADE",
+      "emocao_secundaria": "OTIMISTA",
+      "comportamento": "olha o gráfico e vê poesia; entra com a alma, sai com o stop."
+    },
+    "ANIMADO": {
+      "nivel": "secundaria",
+      "tamanho_original": 7,
+      "emocao_primaria": "SURPRESA",
+      "comportamento": "Emoção secundária relacionada a SURPRESA - comportamento em desenvolvimento."
+    },
+    "Energético": {
+      "nivel": "terciaria",
+      "tamanho_original": 10,
+      "emocao_primaria": "SURPRESA",
+      "emocao_secundaria": "ANIMADO",
+      "comportamento": "o corpo dispara antes da razão; clica sem ver, depois inventa o motivo."
+    },
+    "Ansioso": {
+      "nivel": "terciaria",
+      "tamanho_original": 7,
+      "emocao_primaria": "SURPRESA",
+      "emocao_secundaria": "ANIMADO",
+      "comportamento": "vê o candle nascer e já sente o trade dentro; confunde previsão com pressentimento."
+    },
+    "MARAVILHADO": {
+      "nivel": "secundaria",
+      "tamanho_original": 11,
+      "emocao_primaria": "SURPRESA",
+      "comportamento": "Emoção secundária relacionada a SURPRESA - comportamento em desenvolvimento."
+    },
+    "Admirado": {
+      "nivel": "terciaria",
+      "tamanho_original": 8,
+      "emocao_primaria": "SURPRESA",
+      "emocao_secundaria": "MARAVILHADO",
+      "comportamento": "fica encantado com o movimento perfeito; tenta repetir, mas esquece que foi acaso."
+    },
+    "Atônito": {
+      "nivel": "terciaria",
+      "tamanho_original": 7,
+      "emocao_primaria": "SURPRESA",
+      "emocao_secundaria": "MARAVILHADO",
+      "comportamento": "não acredita no que vê; trava o dedo e deixa o lucro virar lembrança."
+    },
+    "CONFUSO": {
+      "nivel": "secundaria",
+      "tamanho_original": 7,
+      "emocao_primaria": "SURPRESA",
+      "comportamento": "Emoção secundária relacionada a SURPRESA - comportamento em desenvolvimento."
+    },
+    "Perplexo": {
+      "nivel": "terciaria",
+      "tamanho_original": 8,
+      "emocao_primaria": "SURPRESA",
+      "emocao_secundaria": "CONFUSO",
+      "comportamento": "vê o mercado ir contra e não entende; espera explicação quando precisava agir."
+    },
+    "Desiludido": {
+      "nivel": "terciaria",
+      "tamanho_original": 10,
+      "emocao_primaria": "SURPRESA",
+      "emocao_secundaria": "CONFUSO",
+      "comportamento": "acreditava no call; o stop vem e junto dele, a sensação de traição."
+    },
+    "ASSUSTADO": {
+      "nivel": "secundaria",
+      "tamanho_original": 9,
+      "emocao_primaria": "MEDO",
+      "comportamento": "Emoção secundária relacionada a MEDO - comportamento em desenvolvimento."
+    },
+    "Consternado": {
+      "nivel": "terciaria",
+      "tamanho_original": 11,
+      "emocao_primaria": "SURPRESA",
+      "emocao_secundaria": "ESPANTADO",
+      "comportamento": "sente o baque como uma ofensa pessoal; a tela vira espelho da própria decepção."
+    },
+    "Chocado": {
+      "nivel": "terciaria",
+      "tamanho_original": 7,
+      "emocao_primaria": "SURPRESA",
+      "emocao_secundaria": "ESPANTADO",
+      "comportamento": "o mercado rasga sem aviso; o cérebro sai do ar, o corpo reage sozinho."
+    },
+    "SOLITÁRIO": {
+      "nivel": "secundaria",
+      "tamanho_original": 9,
+      "emocao_primaria": "TRISTEZA",
+      "comportamento": "Emoção secundária relacionada a TRISTEZA - comportamento em desenvolvimento."
+    },
+    "Isolado": {
+      "nivel": "terciaria",
+      "tamanho_original": 7,
+      "emocao_primaria": "TRISTEZA",
+      "emocao_secundaria": "SOLITÁRIO",
+      "comportamento": "se fecha no erro; evita grupo, call, conversa — só quer sumir do mercado."
+    },
+    "Abandonado": {
+      "nivel": "terciaria",
+      "tamanho_original": 10,
+      "emocao_primaria": "TRISTEZA",
+      "emocao_secundaria": "SOLITÁRIO",
+      "comportamento": "sente que o mercado o deixou pra trás; não vê mais lugar pra si."
+    },
+    "VULNERÁVEL": {
+      "nivel": "secundaria",
+      "tamanho_original": 10,
+      "emocao_primaria": "TRISTEZA",
+      "comportamento": "Emoção secundária relacionada a TRISTEZA - comportamento em desenvolvimento."
+    },
+    "Frágil": {
+      "nivel": "terciaria",
+      "tamanho_original": 6,
+      "emocao_primaria": "TRISTEZA",
+      "emocao_secundaria": "VULNERÁVEL",
+      "comportamento": "qualquer candle o desmonta; a autoconfiança virou vidro."
+    },
+    "Vitimizado": {
+      "nivel": "terciaria",
+      "tamanho_original": 10,
+      "emocao_primaria": "TRISTEZA",
+      "emocao_secundaria": "VULNERÁVEL",
+      "comportamento": "acredita que o mercado o persegue; transforma azar em identidade."
+    },
+    "DESESPERADO": {
+      "nivel": "secundaria",
+      "tamanho_original": 11,
+      "emocao_primaria": "TRISTEZA",
+      "comportamento": "Emoção secundária relacionada a TRISTEZA - comportamento em desenvolvimento."
+    },
+    "Impotente": {
+      "nivel": "terciaria",
+      "tamanho_original": 9,
+      "emocao_primaria": "TRISTEZA",
+      "emocao_secundaria": "DESESPERADO",
+      "comportamento": "assiste ao prejuízo sem força pra clicar; o mouse pesa uma tonelada."
+    },
+    "Enlutado": {
+      "nivel": "terciaria",
+      "tamanho_original": 8,
+      "emocao_primaria": "TRISTEZA",
+      "emocao_secundaria": "DESESPERADO",
+      "comportamento": "sente luto por um saldo, como se tivesse perdido alguém."
+    },
+    "DEPRESSIVO": {
+      "nivel": "secundaria",
+      "tamanho_original": 10,
+      "emocao_primaria": "TRISTEZA",
+      "comportamento": "Emoção secundária relacionada a TRISTEZA - comportamento em desenvolvimento."
+    },
+    "Vazio": {
+      "nivel": "terciaria",
+      "tamanho_original": 5,
+      "emocao_primaria": "TRISTEZA",
+      "emocao_secundaria": "DEPRESSIVO",
+      "comportamento": "opera por hábito; nada emociona, nem o gain."
+    },
+    "Inferiorizado": {
+      "nivel": "terciaria",
+      "tamanho_original": 13,
+      "emocao_primaria": "TRISTEZA",
+      "emocao_secundaria": "DEPRESSIVO",
+      "comportamento": "se compara com todo mundo; cada acerto alheio soa como ofensa."
+    },
+    "CULPADO": {
+      "nivel": "secundaria",
+      "tamanho_original": 7,
+      "emocao_primaria": "TRISTEZA",
+      "comportamento": "Emoção secundária relacionada a TRISTEZA - comportamento em desenvolvimento."
+    },
+    "Arrependido": {
+      "nivel": "terciaria",
+      "tamanho_original": 11,
+      "emocao_primaria": "TRISTEZA",
+      "emocao_secundaria": "CULPADO",
+      "comportamento": "sabe que não devia ter entrado, mas entrou; remoendo o clique como pecado."
+    },
+    "Envergonhado": {
+      "nivel": "terciaria",
+      "tamanho_original": 12,
+      "emocao_primaria": "TRISTEZA",
+      "emocao_secundaria": "CULPADO",
+      "comportamento": "não quer mostrar o resultado; o loss parece falha moral."
+    },
+    "ENTEDIADO": {
+      "nivel": "secundaria",
+      "tamanho_original": 9,
+      "emocao_primaria": "TRISTEZA",
+      "comportamento": "Emoção secundária relacionada a TRISTEZA - comportamento em desenvolvimento."
+    },
+    "Apático": {
+      "nivel": "terciaria",
+      "tamanho_original": 7,
+      "emocao_primaria": "TRISTEZA",
+      "emocao_secundaria": "ENTEDIADO",
+      "comportamento": "vê o mercado andar e não sente vontade de reagir."
+    },
+    "Desmotivado": {
+      "nivel": "terciaria",
+      "tamanho_original": 11,
+      "emocao_primaria": "TRISTEZA",
+      "emocao_secundaria": "ENTEDIADO",
+      "comportamento": "começa o dia sem plano; diz que é pausa, mas é desistência disfarçada."
+    },
+    "MAGOADO": {
+      "nivel": "secundaria",
+      "tamanho_original": 7,
+      "emocao_primaria": "TRISTEZA",
+      "comportamento": "Emoção secundária relacionada a TRISTEZA - comportamento em desenvolvimento."
+    },
+    "Constrangido": {
+      "nivel": "terciaria",
+      "tamanho_original": 12,
+      "emocao_primaria": "NOJO",
+      "emocao_secundaria": "REPROVADOR",
+      "comportamento": "se sente exposto pelo próprio erro; evita olhar o gráfico que o desmascara."
+    },
+    "Desapontado": {
+      "nivel": "terciaria",
+      "tamanho_original": 11,
+      "emocao_primaria": "TRISTEZA",
+      "emocao_secundaria": "MAGOADO",
+      "comportamento": "olha o diário e sente que nada mudou; a evolução parou no medo."
+    },
+    "REPROVADOR": {
+      "nivel": "secundaria",
+      "tamanho_original": 10,
+      "emocao_primaria": "NOJO",
+      "comportamento": "Emoção secundária relacionada a NOJO - comportamento em desenvolvimento."
+    },
+    "Julgador": {
+      "nivel": "terciaria",
+      "tamanho_original": 8,
+      "emocao_primaria": "NOJO",
+      "emocao_secundaria": "REPROVADOR",
+      "comportamento": "acha defeito em todo setup menos no seu; precisa criticar pra se proteger."
+    },
+    "DISTANCIAMENTO": {
+      "nivel": "secundaria",
+      "tamanho_original": 14,
+      "emocao_primaria": "NOJO",
+      "comportamento": "Emoção secundária relacionada a NOJO - comportamento em desenvolvimento."
+    },
+    "Repugnância": {
+      "nivel": "terciaria",
+      "tamanho_original": 11,
+      "emocao_primaria": "NOJO",
+      "emocao_secundaria": "DISTANCIAMENTO",
+      "comportamento": "sente asco do próprio padrão; promete mudar e repete no dia seguinte."
+    },
+    "Desprezo": {
+      "nivel": "terciaria",
+      "tamanho_original": 8,
+      "emocao_primaria": "NOJO",
+      "emocao_secundaria": "DISTANCIAMENTO",
+      "comportamento": "olha pro mercado com ironia; finge que não liga, mas não consegue largar."
+    },
+    "ASCO": {
+      "nivel": "secundaria",
+      "tamanho_original": 4,
+      "emocao_primaria": "NOJO",
+      "comportamento": "Emoção secundária relacionada a NOJO - comportamento em desenvolvimento."
+    },
+    "Nauseado": {
+      "nivel": "terciaria",
+      "tamanho_original": 8,
+      "emocao_primaria": "NOJO",
+      "emocao_secundaria": "ASCO",
+      "comportamento": "não suporta ver a tela; o corpo rejeita o ambiente onde falhou."
+    },
+    "Ojeriza": {
+      "nivel": "terciaria",
+      "tamanho_original": 7,
+      "emocao_primaria": "NOJO",
+      "emocao_secundaria": "ASCO",
+      "comportamento": "evita o ativo, o horário e até o cheiro da operação que o fez sangrar."
+    },
+    "REPULSA": {
+      "nivel": "secundaria",
+      "tamanho_original": 7,
+      "emocao_primaria": "NOJO",
+      "comportamento": "Emoção secundária relacionada a NOJO - comportamento em desenvolvimento."
+    },
+    "Aversão": {
+      "nivel": "terciaria",
+      "tamanho_original": 7,
+      "emocao_primaria": "NOJO",
+      "emocao_secundaria": "REPULSA",
+      "comportamento": "sente repulsa pelo risco; prefere reclamar a enfrentar."
+    },
+    "Rejeição": {
+      "nivel": "terciaria",
+      "tamanho_original": 8,
+      "emocao_primaria": "NOJO",
+      "emocao_secundaria": "REPULSA",
+      "comportamento": "fecha o gráfico e diz “isso não é pra mim”; o medo se fantasia de desinteresse."
+    },
+    "DECEPCIONADO": {
+      "nivel": "secundaria",
+      "tamanho_original": 12,
+      "emocao_primaria": "RAIVA",
+      "comportamento": "Emoção secundária relacionada a RAIVA - comportamento em desenvolvimento."
+    },
+    "Traído": {
+      "nivel": "terciaria",
+      "tamanho_original": 6,
+      "emocao_primaria": "RAIVA",
+      "emocao_secundaria": "DECEPCIONADO",
+      "comportamento": "sente que o mercado o enganou; busca vingança no próximo clique."
+    },
+    "ULTRAJADO": {
+      "nivel": "secundaria",
+      "tamanho_original": 9,
+      "emocao_primaria": "RAIVA",
+      "comportamento": "Emoção secundária relacionada a RAIVA - comportamento em desenvolvimento."
+    },
+    "Desrespeitado": {
+      "nivel": "terciaria",
+      "tamanho_original": 13,
+      "emocao_primaria": "RAIVA",
+      "emocao_secundaria": "ULTRAJADO",
+      "comportamento": "sente que o ativo zombou dele; entra pra “mostrar quem manda”."
+    },
+    "Ridicularizado": {
+      "nivel": "terciaria",
+      "tamanho_original": 14,
+      "emocao_primaria": "RAIVA",
+      "emocao_secundaria": "ULTRAJADO",
+      "comportamento": "o loss público dói mais que o financeiro; a vaidade virou gatilho."
+    },
+    "RANCOROSO": {
+      "nivel": "secundaria",
+      "tamanho_original": 9,
+      "emocao_primaria": "RAIVA",
+      "comportamento": "Emoção secundária relacionada a RAIVA - comportamento em desenvolvimento."
+    },
+    "Indignado": {
+      "nivel": "terciaria",
+      "tamanho_original": 9,
+      "emocao_primaria": "RAIVA",
+      "emocao_secundaria": "RANCOROSO",
+      "comportamento": "acha que o mercado perdeu a lógica; opera pra provar que está certo."
+    },
+    "Ofendido": {
+      "nivel": "terciaria",
+      "tamanho_original": 8,
+      "emocao_primaria": "RAIVA",
+      "emocao_secundaria": "RANCOROSO",
+      "comportamento": "leva o stop pro lado pessoal; transforma um evento neutro em ataque."
+    },
+    "COLÉRICO": {
+      "nivel": "secundaria",
+      "tamanho_original": 8,
+      "emocao_primaria": "RAIVA",
+      "comportamento": "Emoção secundária relacionada a RAIVA - comportamento em desenvolvimento."
+    },
+    "Furioso": {
+      "nivel": "terciaria",
+      "tamanho_original": 7,
+      "emocao_primaria": "RAIVA",
+      "emocao_secundaria": "COLÉRICO",
+      "comportamento": "a tela vira inimigo; o dedo, arma."
+    },
+    "Explosivo": {
+      "nivel": "terciaria",
+      "tamanho_original": 9,
+      "emocao_primaria": "RAIVA",
+      "emocao_secundaria": "COLÉRICO",
+      "comportamento": "reage sem pensar; a raiva é mais rápida que a consciência."
+    },
+    "AGRESSIVO": {
+      "nivel": "secundaria",
+      "tamanho_original": 9,
+      "emocao_primaria": "RAIVA",
+      "comportamento": "Emoção secundária relacionada a RAIVA - comportamento em desenvolvimento."
+    },
+    "Irascível": {
+      "nivel": "terciaria",
+      "tamanho_original": 9,
+      "emocao_primaria": "RAIVA",
+      "emocao_secundaria": "AGRESSIVO",
+      "comportamento": "qualquer tique o irrita; a paciência foi estopada antes do preço."
+    },
+    "Hostil": {
+      "nivel": "terciaria",
+      "tamanho_original": 6,
+      "emocao_primaria": "RAIVA",
+      "emocao_secundaria": "AGRESSIVO",
+      "comportamento": "sente prazer em ver o erro alheio; o ego opera no lugar da mente."
+    },
+    "FRUSTRADO": {
+      "nivel": "secundaria",
+      "tamanho_original": 9,
+      "emocao_primaria": "RAIVA",
+      "comportamento": "Emoção secundária relacionada a RAIVA - comportamento em desenvolvimento."
+    },
+    "Irritado": {
+      "nivel": "terciaria",
+      "tamanho_original": 8,
+      "emocao_primaria": "RAIVA",
+      "emocao_secundaria": "FRUSTRADO",
+      "comportamento": "fala com a tela; cada delay é ofensa."
+    },
+    "Aborrecido": {
+      "nivel": "terciaria",
+      "tamanho_original": 10,
+      "emocao_primaria": "RAIVA",
+      "emocao_secundaria": "FRUSTRADO",
+      "comportamento": "opera entediado e agressivo; mistura tédio com rancor."
+    },
+    "FRIO-CALCULISTA": {
+      "nivel": "secundaria",
+      "tamanho_original": 15,
+      "emocao_primaria": "RAIVA",
+      "comportamento": "Emoção secundária relacionada a RAIVA - comportamento em desenvolvimento."
+    },
+    "Fechado": {
+      "nivel": "terciaria",
+      "tamanho_original": 7,
+      "emocao_primaria": "RAIVA",
+      "emocao_secundaria": "FRIO-CALCULISTA",
+      "comportamento": "não ouve ninguém; cria uma bolha onde só ele tem razão."
+    },
+    "Insensível": {
+      "nivel": "terciaria",
+      "tamanho_original": 10,
+      "emocao_primaria": "RAIVA",
+      "emocao_secundaria": "FRIO-CALCULISTA",
+      "comportamento": "não sente mais nada; o emocional anestesiou junto com o saldo."
+    },
+    "CRÍTICO": {
+      "nivel": "secundaria",
+      "tamanho_original": 7,
+      "emocao_primaria": "RAIVA",
+      "comportamento": "Emoção secundária relacionada a RAIVA - comportamento em desenvolvimento."
+    },
+    "Desconfiado": {
+      "nivel": "terciaria",
+      "tamanho_original": 11,
+      "emocao_primaria": "RAIVA",
+      "emocao_secundaria": "CRÍTICO",
+      "comportamento": "duvida do mercado, da corretora, do mundo; ninguém escapa da paranoia."
+    },
+    "Menosprezador": {
+      "nivel": "terciaria",
+      "tamanho_original": 13,
+      "emocao_primaria": "RAIVA",
+      "emocao_secundaria": "CRÍTICO",
+      "comportamento": "ironiza quem tenta ajudar; prefere perder sozinho a aprender."
+    },
+    "INVEJA": {
+      "nivel": "secundaria",
+      "tamanho_original": 6,
+      "emocao_primaria": "RAIVA",
+      "comportamento": "Emoção secundária relacionada a RAIVA - comportamento em desenvolvimento."
+    },
+    "Cobiçoso": {
+      "nivel": "terciaria",
+      "tamanho_original": 8,
+      "emocao_primaria": "RAIVA",
+      "emocao_secundaria": "INVEJA",
+      "comportamento": "entra por ganância pura; quer sentir o poder de ganhar, não o processo de operar."
+    },
+    "Desamparado": {
+      "nivel": "terciaria",
+      "tamanho_original": 11,
+      "emocao_primaria": "MEDO",
+      "emocao_secundaria": "ASSUSTADO",
+      "comportamento": "sente que nada o protege; cada trade é um salto no escuro."
+    },
+    "Apavorado": {
+      "nivel": "terciaria",
+      "tamanho_original": 9,
+      "emocao_primaria": "MEDO",
+      "emocao_secundaria": "ASSUSTADO",
+      "comportamento": "vê o mercado mexer e congela; o corpo opera o medo antes da mente decidir."
+    },
+    "ANSIOSO": {
+      "nivel": "secundaria",
+      "tamanho_original": 7,
+      "emocao_primaria": "MEDO",
+      "comportamento": "Emoção secundária relacionada a MEDO - comportamento em desenvolvimento."
+    },
+    "Sobrecarregado": {
+      "nivel": "terciaria",
+      "tamanho_original": 14,
+      "emocao_primaria": "MEDO",
+      "emocao_secundaria": "ANSIOSO",
+      "comportamento": "pensa demais, sente demais; o cérebro colapsa antes do clique."
+    },
+    "Preocupado": {
+      "nivel": "terciaria",
+      "tamanho_original": 10,
+      "emocao_primaria": "MEDO",
+      "emocao_secundaria": "ANSIOSO",
+      "comportamento": "vigia o gráfico como um guarda noturno; o medo virou rotina."
+    },
+    "INSEGURO": {
+      "nivel": "secundaria",
+      "tamanho_original": 8,
+      "emocao_primaria": "MEDO",
+      "comportamento": "Emoção secundária relacionada a MEDO - comportamento em desenvolvimento."
+    },
+    "Inadequado": {
+      "nivel": "terciaria",
+      "tamanho_original": 10,
+      "emocao_primaria": "MEDO",
+      "emocao_secundaria": "INSEGURO",
+      "comportamento": "sente que não nasceu pra isso; cada stop reforça a crença de incapacidade."
+    },
+    "Inferior": {
+      "nivel": "terciaria",
+      "tamanho_original": 8,
+      "emocao_primaria": "MEDO",
+      "emocao_secundaria": "INSEGURO",
+      "comportamento": "se encolhe diante dos outros traders; o talento morre na comparação."
+    },
+    "FRACO": {
+      "nivel": "secundaria",
+      "tamanho_original": 5,
+      "emocao_primaria": "MEDO",
+      "comportamento": "Emoção secundária relacionada a MEDO - comportamento em desenvolvimento."
+    },
+    "Insignificante": {
+      "nivel": "terciaria",
+      "tamanho_original": 14,
+      "emocao_primaria": "MEDO",
+      "emocao_secundaria": "FRACO",
+      "comportamento": "o mercado parece gigante; ele, um ponto na tela."
+    },
+    "REJEITADO": {
+      "nivel": "secundaria",
+      "tamanho_original": 9,
+      "emocao_primaria": "MEDO",
+      "comportamento": "Emoção secundária relacionada a MEDO - comportamento em desenvolvimento."
+    },
+    "Excluído": {
+      "nivel": "terciaria",
+      "tamanho_original": 8,
+      "emocao_primaria": "MEDO",
+      "emocao_secundaria": "REJEITADO",
+      "comportamento": "acha que todos sabem algo que ele não; o sentimento de fora o consome."
+    },
+    "Perseguido": {
+      "nivel": "terciaria",
+      "tamanho_original": 10,
+      "emocao_primaria": "MEDO",
+      "emocao_secundaria": "REJEITADO",
+      "comportamento": "interpreta ruído como ataque; acredita que o mercado o caça."
+    },
+    "AMEAÇADO": {
+      "nivel": "secundaria",
+      "tamanho_original": 8,
+      "emocao_primaria": "MEDO",
+      "comportamento": "Emoção secundária relacionada a MEDO - comportamento em desenvolvimento."
+    },
+    "Apreensivo": {
+      "nivel": "terciaria",
+      "tamanho_original": 10,
+      "emocao_primaria": "MEDO",
+      "emocao_secundaria": "AMEAÇADO",
+      "comportamento": "entra travado, sai cedo; prefere a segurança da dúvida ao risco da decisão."
+    },
+    "Vulnerável": {
+      "nivel": "terciaria",
+      "tamanho_original": 10,
+      "emocao_primaria": "MEDO",
+      "emocao_secundaria": "AMEAÇADO",
+      "comportamento": "se sente exposto; qualquer variação vira ameaça."
+    },
+    "ENCIUMADO": {
+      "nivel": "secundaria",
+      "tamanho_original": 9,
+      "emocao_primaria": "MEDO",
+      "comportamento": "Emoção secundária relacionada a MEDO - comportamento em desenvolvimento."
+    },
+    "Inseguro": {
+      "nivel": "terciaria",
+      "tamanho_original": 8,
+      "emocao_primaria": "MEDO",
+      "emocao_secundaria": "ENCIUMADO",
+      "comportamento": "pede confirmação até perder o timing; confunde prudência com paralisia."
+    },
+    "Apego Forte": {
+      "nivel": "terciaria",
+      "tamanho_original": 11,
+      "emocao_primaria": "MEDO",
+      "emocao_secundaria": "ENCIUMADO",
+      "comportamento": "não solta o trade que está morrendo; teme perder a ilusão de controle."
+    },
+    "Semvalor": {
+      "nivel": "terciaria",
+      "tamanho_original": 9,
+      "emocao_primaria": "MEDO",
+      "emocao_secundaria": "FRACO",
+      "comportamento": "mede o próprio mérito pelo PnL; quando perde, não se sente gente."
+    },
+    "Constrangedor": {
+      "nivel": "terciaria",
+      "tamanho_original": 12,
+      "emocao_primaria": "NOJO",
+      "emocao_secundaria": "REPROVADOR",
+      "comportamento": "sente que sua presença ou ação causa desconforto; evita situações onde pode ser julgado ou exposto."
+    },
+    "Recalcado": {
+      "nivel": "terciaria",
+      "tamanho_original": 10,
+      "emocao_primaria": "RAIVA",
+      "emocao_secundaria": "INVEJA",
+      "comportamento": "inveja o resultado alheio; o sucesso do outro vira combustível pra autossabotagem."
+    },
+    "Ressentido": {
+      "nivel": "terciaria",
+      "tamanho_original": 10,
+      "emocao_primaria": "RAIVA",
+      "emocao_secundaria": "INVEJA",
+      "comportamento": "guarda o stop como ofensa; promete devolver tudo “com juros”."
+    },
+    "ESPANTADO": {
+      "nivel": "secundaria",
+      "tamanho_original": 9,
+      "emocao_primaria": "SURPRESA",
+      "comportamento": "Emoção secundária relacionada a SURPRESA - comportamento em desenvolvimento."
+    }
+  }
+}
