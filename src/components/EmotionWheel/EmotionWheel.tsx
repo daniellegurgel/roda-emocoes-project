@@ -242,7 +242,7 @@ const EmotionWheel: React.FC<EmotionWheelProps> = ({
           const textPos = calculateTextPosition(
             centerX,
             centerY,
-            (radiusSecondary + radiusTertiary) / 2,
+            radiusSecondary + (radiusTertiary - radiusSecondary) * 0.6,
             startAngle,
             endAngle
           );
@@ -269,7 +269,7 @@ const EmotionWheel: React.FC<EmotionWheelProps> = ({
                   textAnchor="middle"
                   dominantBaseline="middle"
                   transform={`rotate(${-textPos.rotation}, ${textPos.x}, ${textPos.y})`}
-                  fontSize="10"
+                  fontSize="11"
                   fill="#333"
                   style={{ pointerEvents: 'none', userSelect: 'none' }}
                 >
