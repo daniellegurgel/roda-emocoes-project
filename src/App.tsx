@@ -46,7 +46,6 @@ function App() {
             onEmotionClick={handleEmotionClick}
             onEmotionHover={handleEmotionHover}
             width="100%"
-            height="auto"
             style={{ maxWidth: '800px', margin: '0 auto' }}
           />
         </div>

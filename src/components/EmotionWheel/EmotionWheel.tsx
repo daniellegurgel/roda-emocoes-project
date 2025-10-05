@@ -13,7 +13,7 @@ const EmotionWheel: React.FC<EmotionWheelProps> = ({
   disabledEmotions = [],
   viewBox = '0 0 1000 1000',
   width = '100%',
-  height = 'auto',
+  height,
   padding = 20,
   className = '',
   style = {},
@@ -292,6 +292,7 @@ const EmotionWheel: React.FC<EmotionWheelProps> = ({
         width={width}
         height={height}
         className="emotion-wheel-svg"
+        style={{ width: '100%', height: 'auto' }}
       >
         {/* Tertiary (outer) */}
         {renderTertiaryEmotions()}
