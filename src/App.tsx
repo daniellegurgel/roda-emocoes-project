@@ -1,6 +1,7 @@
 import { EmotionWheel } from './components/EmotionWheel';
 import emotionsData from './data/emotions.json';
 import type { EmotionsData, Emotion } from './types';
+import './App.css';
 
 function App() {
   const handleEmotionClick = (emotion: string, data: Emotion) => {
@@ -15,46 +16,74 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 p-8">
-      <div className="max-w-6xl mx-auto">
-        <h1 className="text-4xl font-bold text-center mb-2 text-gray-800">
+    <div style={{ minHeight: '100vh', backgroundColor: '#f3f4f6', padding: '2rem' }}>
+      <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+        <h1 style={{ 
+          fontSize: '2.5rem', 
+          fontWeight: 'bold', 
+          textAlign: 'center', 
+          marginBottom: '0.5rem',
+          color: '#1f2937'
+        }}>
           Roda das Emoções
         </h1>
-        <p className="text-center text-gray-600 mb-8">
+        <p style={{ 
+          textAlign: 'center', 
+          color: '#6b7280', 
+          marginBottom: '2rem' 
+        }}>
           {emotionsData.metadata.total_emocoes} emoções mapeadas
         </p>
         
-        <div className="bg-white rounded-lg shadow-lg p-8">
+        <div style={{ 
+          backgroundColor: 'white', 
+          borderRadius: '0.5rem', 
+          boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1)', 
+          padding: '2rem' 
+        }}>
           <EmotionWheel
             data={emotionsData as EmotionsData}
             onEmotionClick={handleEmotionClick}
             onEmotionHover={handleEmotionHover}
             width="100%"
             height="auto"
-            className="max-w-4xl mx-auto"
+            style={{ maxWidth: '800px', margin: '0 auto' }}
           />
         </div>
 
-        <div className="mt-8 bg-white rounded-lg shadow p-6">
-          <h2 className="text-2xl font-semibold mb-4">Informações</h2>
-          <div className="grid grid-cols-3 gap-4 text-center">
+        <div style={{ 
+          marginTop: '2rem', 
+          backgroundColor: 'white', 
+          borderRadius: '0.5rem', 
+          boxShadow: '0 1px 3px 0 rgba(0, 0, 0, 0.1)', 
+          padding: '1.5rem' 
+        }}>
+          <h2 style={{ fontSize: '1.5rem', fontWeight: '600', marginBottom: '1rem' }}>
+            Informações
+          </h2>
+          <div style={{ 
+            display: 'grid', 
+            gridTemplateColumns: 'repeat(3, 1fr)', 
+            gap: '1rem', 
+            textAlign: 'center' 
+          }}>
             <div>
-              <div className="text-3xl font-bold text-yellow-500">
+              <div style={{ fontSize: '2rem', fontWeight: 'bold', color: '#eab308' }}>
                 {emotionsData.metadata.primarias}
               </div>
-              <div className="text-sm text-gray-600">Primárias</div>
+              <div style={{ fontSize: '0.875rem', color: '#6b7280' }}>Primárias</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-blue-500">
+              <div style={{ fontSize: '2rem', fontWeight: 'bold', color: '#3b82f6' }}>
                 {emotionsData.metadata.secundarias}
               </div>
-              <div className="text-sm text-gray-600">Secundárias</div>
+              <div style={{ fontSize: '0.875rem', color: '#6b7280' }}>Secundárias</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-purple-500">
+              <div style={{ fontSize: '2rem', fontWeight: 'bold', color: '#a855f7' }}>
                 {emotionsData.metadata.terciarias}
               </div>
-              <div className="text-sm text-gray-600">Terciárias</div>
+              <div style={{ fontSize: '0.875rem', color: '#6b7280' }}>Terciárias</div>
             </div>
           </div>
         </div>
