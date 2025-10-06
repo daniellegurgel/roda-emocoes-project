@@ -1,0 +1,23 @@
+.App {
+  min-height: 100vh;
+  background-color: #f9fafb;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* Global styles for the emotion wheel */
+.emotion-wheel-container {
+  outline: none;
+  width: 100%;
+  height: 100%;
+}
+
+.emotion-wheel-container:focus {
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .App {
+    padding: 10px;
+  }
+}
