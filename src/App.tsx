@@ -1,12 +1,15 @@
+import { useState } from 'react';
 import { EmotionWheel } from './components/EmotionWheel';
 import emotionsData from './data/emotions.json';
 import type { EmotionsData, Emotion } from './types';
 import './App.css';
 
 function App() {
+  const [selectedEmotions, setSelectedEmotions] = useState<string[]>([]);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   const handleEmotionClick = (emotion: string, data: Emotion) => {
     console.log('Clicked:', emotion, data);
-    alert(`Você clicou em: ${emotion}\n\nNível: ${data.nivel}\nComportamento: ${data.comportamento}`);
   };
 
   const handleEmotionHover = (emotion: string | null, data: Emotion | null) => {
@@ -15,40 +18,109 @@ function App() {
     }
   };
 
+  const handleSelectionChange = (newSelection: string[]) => {
+    console.log('Selection changed:', newSelection);
+    setSelectedEmotions(newSelection);
+  };
+
   return (
     <div style={{ minHeight: '100vh', backgroundColor: '#f3f4f6', padding: '2rem' }}>
       <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-        <h1 style={{ 
-          fontSize: '2.5rem', 
-          fontWeight: 'bold', 
-          textAlign: 'center', 
+        <h1 style={{
+          fontSize: '2.5rem',
+          fontWeight: 'bold',
+          textAlign: 'center',
           marginBottom: '0.5rem',
           color: '#1f2937'
         }}>
           Roda das Emoções
         </h1>
-        <p style={{ 
-          textAlign: 'center', 
-          color: '#6b7280', 
-          marginBottom: '2rem' 
+        <p style={{
+          textAlign: 'center',
+          color: '#6b7280',
+          marginBottom: '2rem'
         }}>
           {emotionsData.metadata.total_emocoes} emoções mapeadas
         </p>
-        
-        <div style={{ 
-          backgroundColor: 'white', 
-          borderRadius: '0.5rem', 
-          boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1)', 
-          padding: '2rem' 
+
+        {/* Botão para abrir modal */}
+        <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
+          <button
+            onClick={() => setIsModalOpen(true)}
+            style={{
+              backgroundColor: '#3b82f6',
+              color: 'white',
+              border: 'none',
+              padding: '12px 24px',
+              borderRadius: '6px',
+              fontSize: '16px',
+              fontWeight: 'bold',
+              cursor: 'pointer',
+            }}
+          >
+            Abrir Roda das Emoções
+          </button>
+        </div>
+
+        <div style={{
+          backgroundColor: 'white',
+          borderRadius: '0.5rem',
+          boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1)',
+          padding: '2rem'
         }}>
           <EmotionWheel
             data={emotionsData as EmotionsData}
             onEmotionClick={handleEmotionClick}
             onEmotionHover={handleEmotionHover}
+            onSelectionChange={handleSelectionChange}
+            selectedEmotions={selectedEmotions}
+            selectionMode="multiple"
+            maxSelected={3}
             width="100%"
             style={{ maxWidth: '800px', margin: '0 auto' }}
+            enableRotation={true}
+            enableZoom={true}
+            snapToSectors={true}
+            theme={{
+              colors: {
+                primary: '#e53935',
+                secondary: '#42a5f5',
+                tertiary: '#66bb6a',
+                selected: '#2196f3',
+                hover: 'rgba(33, 150, 243, 0.1)',
+              }
+            }}
           />
         </div>
+
+        {/* Modal */}
+        <EmotionWheel
+          data={emotionsData as EmotionsData}
+          onEmotionClick={handleEmotionClick}
+          onEmotionHover={handleEmotionHover}
+          onSelectionChange={handleSelectionChange}
+          selectedEmotions={selectedEmotions}
+          selectionMode="multiple"
+          maxSelected={3}
+          enableModal={true}
+          modalProps={{
+            isOpen: isModalOpen,
+            onClose: () => setIsModalOpen(false),
+            title: 'Selecione suas emoções'
+          }}
+          enableRotation={true}
+          enableZoom={true}
+          snapToSectors={true}
+          theme={{
+            colors: {
+              primary: '#e53935',
+              secondary: '#42a5f5',
+              tertiary: '#66bb6a',
+              selected: '#2196f3',
+              hover: 'rgba(33, 150, 243, 0.1)',
+            }
+          }}
+        />
 
         <div style={{ 
           marginTop: '2rem', 

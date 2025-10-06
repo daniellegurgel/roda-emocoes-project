@@ -70,7 +70,7 @@ export const createArcPath = (
 };
 
 /**
- * Calculate text position and rotation for a segment
+ * Calculate text position and rotation for a segment with proper orientation
  */
 export const calculateTextPosition = (
   centerX: number,
@@ -78,14 +78,32 @@ export const calculateTextPosition = (
   radius: number,
   startAngle: number,
   endAngle: number
-): { x: number; y: number; rotation: number } => {
+): { x: number; y: number; rotation: number; flipText: boolean } => {
   const midAngle = (startAngle + endAngle) / 2;
   const point = polarToCartesian(centerX, centerY, radius, midAngle);
-  
+
+  // Determinar se o texto deve ser invertido (semicírculo inferior)
+  // Ângulos de 180° a 360° ficam na metade inferior
+  const shouldFlip = midAngle >= 180 && midAngle <= 360;
+
+  // Ajuste fino: evitar flip próximo aos limites (threshold 3-5°)
+  const threshold = 5;
+  const adjustedMidAngle = shouldFlip && midAngle < 180 + threshold ? 180 + threshold :
+                          shouldFlip && midAngle > 360 - threshold ? 360 - threshold :
+                          midAngle;
+
+  // Calcular rotação do texto baseada na orientação
+  let textRotation = shouldFlip ? adjustedMidAngle + 180 : adjustedMidAngle;
+
+  // Normalizar rotação para evitar valores extremos
+  if (textRotation > 360) textRotation -= 360;
+  if (textRotation < -360) textRotation += 360;
+
   return {
     x: point.x,
     y: point.y,
-    rotation: midAngle,
+    rotation: textRotation,
+    flipText: shouldFlip,
   };
 };
 
