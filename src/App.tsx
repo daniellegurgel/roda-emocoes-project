@@ -1,9 +1,36 @@
 import { EmotionWheel } from './components/EmotionWheel';
 import emotionsData from './data/emotions.json';
-import type { EmotionsData, Emotion } from './types';
+import type { EmotionsData, Emotion, EmotionWheelTheme, WheelViewState } from './types';
 import './App.css';
 
 function App() {
+  const theme: EmotionWheelTheme = {
+    colors: {
+      label: '#111827',
+      labelSecondary: '#374151',
+      outline: '#111827',
+      focusOutline: '#2563eb',
+      selectedOutline: '#f97316',
+      disabledOpacity: 0.35,
+      hoverOpacity: 0.92,
+      selectedOpacity: 1,
+    },
+    typography: {
+      primaryLabelSize: 16,
+      secondaryLabelSize: 12,
+      tertiaryLabelSize: 11,
+      primaryWeight: 700,
+      secondaryWeight: 600,
+      tertiaryWeight: 600,
+    },
+  };
+
+  const defaultView: WheelViewState = {
+    angleDeg: 0,
+    scale: 1,
+    translate: { x: 0, y: 0 },
+  };
+
   const handleEmotionClick = (emotion: string, data: Emotion) => {
     console.log('Clicked:', emotion, data);
     alert(`Você clicou em: ${emotion}\n\nNível: ${data.nivel}\nComportamento: ${data.comportamento}`);
@@ -46,6 +73,12 @@ function App() {
             onEmotionClick={handleEmotionClick}
             onEmotionHover={handleEmotionHover}
             width="100%"
+            selectionMode="multiple"
+            defaultSelected={["FELICIDADE"]}
+            onChange={(ids) => console.log('selected ->', ids)}
+            theme={theme}
+            defaultViewState={defaultView}
+            onViewChange={(v) => console.log('view ->', v)}
             style={{ maxWidth: '800px', margin: '0 auto' }}
           />
         </div>

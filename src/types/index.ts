@@ -30,6 +30,37 @@ export interface EmotionsData {
   emocoes: Record<string, Emotion>;
 }
 
+// View (zoom/rotação/pan) state
+export interface WheelViewState {
+  angleDeg: number; // rotação global (clockwise)
+  scale: number; // fator relativo ao viewBox
+  translate: { x: number; y: number }; // pan opcional
+}
+
+// Tema (tokens mínimos para v1)
+export interface EmotionWheelTheme {
+  colors: {
+    label: string;
+    labelSecondary: string;
+    outline: string;
+    focusOutline: string;
+    selectedOutline: string;
+    disabledOpacity: number;
+    hoverOpacity: number;
+    selectedOpacity: number;
+  };
+  typography: {
+    primaryLabelSize: number; // px
+    secondaryLabelSize: number; // px
+    tertiaryLabelSize: number; // px
+    primaryWeight?: number;
+    secondaryWeight?: number;
+    tertiaryWeight?: number;
+  };
+}
+
+export type SelectionMode = 'single' | 'multiple';
+
 export interface EmotionWheelProps {
   data: EmotionsData;
   onEmotionClick?: (emotion: string, data: Emotion) => void;
@@ -45,4 +76,27 @@ export interface EmotionWheelProps {
   labelFormatter?: (name: string) => string;
   centerComponent?: React.ReactNode;
   colorScheme?: Partial<Record<string, string>>;
+  // Seleção
+  selectionMode?: SelectionMode; // default: 'multiple'
+  maxSelected?: number; // apenas para 'multiple'
+  selected?: string[]; // controlado
+  defaultSelected?: string[]; // não-controlado
+  onChange?: (selectedIds: string[]) => void;
+  // A11y
+  ariaLabel?: string;
+  getItemAriaLabel?: (emotion: string, data: Emotion) => string;
+  // View state (zoom/rotação)
+  viewState?: WheelViewState; // controlado
+  defaultViewState?: WheelViewState; // não-controlado
+  onViewChange?: (view: WheelViewState) => void;
+  minScale?: number;
+  maxScale?: number;
+  snapToSectors?: boolean;
+  snapToleranceDeg?: number;
+  inertia?: boolean;
+  // Tema
+  theme?: EmotionWheelTheme;
+  // Flags utilitárias
+  readOnly?: boolean;
+  disabled?: boolean;
 }

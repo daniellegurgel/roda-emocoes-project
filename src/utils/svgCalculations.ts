@@ -25,6 +25,24 @@ export const degreesToRadians = (degrees: number): number => {
 };
 
 /**
+ * Normalize an angle to [0, 360)
+ */
+export const normalizeAngle = (angleDeg: number): number => {
+  const a = angleDeg % 360;
+  return a < 0 ? a + 360 : a;
+};
+
+/**
+ * Smallest signed delta from a to b in degrees (-180, 180]
+ */
+export const shortestAngleDelta = (fromDeg: number, toDeg: number): number => {
+  let delta = normalizeAngle(toDeg) - normalizeAngle(fromDeg);
+  if (delta > 180) delta -= 360;
+  if (delta <= -180) delta += 360;
+  return delta;
+};
+
+/**
  * Calculate point on circle given angle and radius
  */
 export const polarToCartesian = (
@@ -90,6 +108,21 @@ export const calculateTextPosition = (
 };
 
 /**
+ * Compute label rotation to apply in SVG transform respecting flip rule.
+ * Returns the angle to be fed directly to `transform="rotate(angle x y)"`.
+ * Rule: flip when angle is in the lower semicircle, with a threshold band.
+ */
+export const calculateLabelTransformAngle = (
+  startAngle: number,
+  endAngle: number,
+  thresholdDeg: number = 4
+): number => {
+  const midAngle = normalizeAngle((startAngle + endAngle) / 2);
+  const inLower = midAngle >= (180 + thresholdDeg) && midAngle < (360 - thresholdDeg);
+  return -midAngle + (inLower ? 180 : 0);
+};
+
+/**
  * Calculate angle distribution based on emotion sizes
  */
 export const calculateAngleDistribution = (
@@ -109,4 +142,57 @@ export const calculateAngleDistribution = (
     currentAngle += angleSpan;
     return segment;
   });
+};
+
+/**
+ * Compute angle from center to a pointer coordinate. 0° at top, clockwise.
+ */
+export const angleFromPoint = (
+  centerX: number,
+  centerY: number,
+  x: number,
+  y: number
+): number => {
+  const dx = x - centerX;
+  const dy = y - centerY;
+  const radians = Math.atan2(dy, dx); // 0 at +X axis
+  const deg = (radians * 180) / Math.PI;
+  return normalizeAngle(deg + 90); // shift so 0 at top
+};
+
+/**
+ * Compose root <g> transform from view state
+ */
+export const composeViewTransform = (
+  centerX: number,
+  centerY: number,
+  angleDeg: number,
+  scale: number,
+  translate: { x: number; y: number }
+): string => {
+  const t = `translate(${translate.x} ${translate.y})`;
+  const r = `rotate(${angleDeg} ${centerX} ${centerY})`;
+  const s = `scale(${scale})`;
+  return `${t} ${r} ${s}`;
+};
+
+/**
+ * Snap an angle to the nearest target angle if within tolerance.
+ */
+export const snapAngle = (
+  angleDeg: number,
+  targets: number[],
+  toleranceDeg: number
+): number => {
+  const normalized = normalizeAngle(angleDeg);
+  let best = normalized;
+  let bestDelta = Infinity;
+  for (const t of targets) {
+    const d = Math.abs(shortestAngleDelta(normalized, t));
+    if (d < bestDelta) {
+      bestDelta = d;
+      best = t;
+    }
+  }
+  return bestDelta <= toleranceDeg ? best : normalized;
 };
